@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mariadb
+  namespace: mariadb-cluster
+spec:
+  ports:
+  - port: 3306
+    name: mysql
+  - port: 4567
+    name: galera
+  - port: 4568
+    name: ist
+  - port: 4444
+    name: sst
+  clusterIP: None
+  selector:
+    app: mariadb
