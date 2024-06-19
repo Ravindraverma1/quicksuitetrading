@@ -1,4 +1,4 @@
-# MariaDB Galera Cluster on Kubernetes
+# MariaDB  Cluster on Kubernetes
 
 This repository contains Kubernetes manifests to deploy a highly available MariaDB  cluster with 3 nodes. The setup includes persistent storage, configuration through ConfigMaps, and services for both internal and external access.
 
@@ -25,7 +25,7 @@ The deployment consists of the following components:
 1. **Namespace**: A dedicated namespace for isolating resources.
 2. **Persistent Volumes (PVs)**: Three PVs for each MariaDB instance.
 3. **Persistent Volume Claim (PVC)**: A claim to request storage.
-4. **ConfigMap**: Configuration settings for the MariaDB Galera cluster.
+4. **ConfigMap**: Configuration settings for the MariaDB  cluster.
 5. **StatefulSet**: Manages the MariaDB instances ensuring stable network identities and storage.
 6. **Headless Service**: Provides stable network identities for the StatefulSet.
 7. **LoadBalancer Service**: Exposes the MariaDB cluster to external clients.
@@ -60,7 +60,7 @@ Replace <EXTERNAL-IP> with the actual external IP address obtained from the prev
 
 ##Monitoring the Cluster
 
-To check the status of the Galera cluster, log in to one of the MariaDB pods and use the following commands:
+To check the status of the  cluster, log in to one of the MariaDB pods and use the following commands:
 
 
 Log in to a MariaDB pod:
@@ -89,14 +89,14 @@ pv-mariadb-0.yaml: Persistent volume for MariaDB instance 0.
 pv-mariadb-1.yaml: Persistent volume for MariaDB instance 1.
 pv-mariadb-2.yaml: Persistent volume for MariaDB instance 2.
 pvc.yaml: Persistent volume claim for the MariaDB instances.
-configmap.yaml: Configuration for the MariaDB Galera cluster.
+configmap.yaml: Configuration for the MariaDB  cluster.
 service-headless.yaml: Headless service for the StatefulSet.
 statefulset.yaml: StatefulSet for deploying MariaDB instances.
 service-loadbalancer.yaml: LoadBalancer service for external access.
 
 
 #Conclusion
-This setup provides a highly available MariaDB Galera cluster on Kubernetes with persistent storage and external access. Follow the deployment steps to set up the cluster and monitor its status to ensure it is running correctly.
+This setup provides a highly available MariaDB  cluster on Kubernetes with persistent storage and external access. Follow the deployment steps to set up the cluster and monitor its status to ensure it is running correctly.
 
 
-This `README.md` provides detailed instructions on how to deploy and manage your MariaDB Galera cluster on Kubernetes, including prerequisites, deployment steps, accessing the cluster, and monitoring its status.
+This `README.md` provides detailed instructions on how to deploy and manage your MariaDB  cluster on Kubernetes, including prerequisites, deployment steps, accessing the cluster, and monitoring its status.
